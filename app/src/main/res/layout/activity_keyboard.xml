@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.weltschmerz.canvasgame.KeyboardActivity">
+
+    <com.example.weltschmerz.canvasgame.GameView
+        android:id="@+id/canvas"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_above="@+id/btnUp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="50dp"
+        android:layout_width="65dp"
+        android:text="Left"
+        android:id="@+id/btnLeft"
+        android:layout_marginBottom="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="moveLeft" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="50dp"
+        android:layout_width="65dp"
+        android:text="Down"
+        android:id="@+id/btnDown"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btnLeft"
+        android:onClick="moveDown" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="50dp"
+        android:layout_width="65dp"
+        android:text="Right"
+        android:id="@+id/btnRight"
+        android:layout_alignTop="@+id/btnLeft"
+        android:layout_toEndOf="@+id/btnDown"
+        android:onClick="moveRight" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="50dp"
+        android:layout_width="65dp"
+        android:text="Up"
+        android:id="@+id/btnUp"
+        android:layout_above="@+id/btnRight"
+        android:layout_toStartOf="@+id/btnRight"
+        android:onClick="moveUp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:id="@+id/button"
+        android:onClick="music"
+        android:layout_below="@+id/canvas"
+        android:layout_alignEnd="@+id/canvas" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Mute"
+        android:id="@+id/button2"
+        android:onClick="musicStop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/canvas" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

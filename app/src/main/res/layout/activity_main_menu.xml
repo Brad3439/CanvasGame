@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/mainpanda"
+    tools:context="com.example.weltschmerz.canvasgame.MainMenuActivity">
+
+    <Button
+        android:text="Gameboy"
+        android:layout_height="50dp"
+        android:textSize="11sp"
+        android:textColor="@color/Black"
+        android:background="@color/White"
+        android:id="@+id/button7"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="119dp"
+        android:onClick="gameboy" />
+
+    <Button
+        android:text="Accelerometer"
+        android:layout_height="50dp"
+        android:id="@+id/button8"
+        android:textSize="11sp"
+        android:textColor="@color/White"
+        android:background="@color/Black"
+        android:layout_alignBaseline="@+id/button7"
+        android:layout_alignBottom="@+id/button7"
+        android:layout_alignParentEnd="true"
+        android:layout_width="119dp"
+        android:onClick="sensor" />
+
+    <TextView
+        android:text="PANDA"
+        android:typeface="monospace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="60sp"
+        android:textColor="@color/Emerald_Green"
+        android:layout_above="@+id/button7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="158dp" />
+
+    <TextView
+        android:text="PURSUIT!"
+        android:typeface="monospace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        android:textColor="@color/Emerald_Green"
+        android:id="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
